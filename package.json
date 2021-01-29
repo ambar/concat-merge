@@ -1,18 +1,31 @@
 {
   "name": "concat-merge",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Recursively merge objects",
   "license": "MIT",
+  "module": "index.js",
+  "main": "index.cjs.js",
   "scripts": {
-    "prepare": "npm test",
+    "prepare": "npm test && npm run build",
+    "build": "esbuild index.js --format=cjs --outfile=index.cjs.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --notify"
   },
   "files": [
-    "lib"
+    "index.cjs.js",
+    "index.js"
   ],
+  "keywords": [
+    "gogen",
+    "concat",
+    "merge"
+  ],
+  "jest": {
+    "preset": "es-jest"
+  },
   "devDependencies": {
+    "es-jest": "^1.1.0",
     "jest": "^26.6.3"
   }
 }

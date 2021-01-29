@@ -1180,6 +1180,18 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
+es-jest@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/es-jest/-/es-jest-1.1.0.tgz#a6211b3c326adde9b6d4b7411adb20bdbda82630"
+  integrity sha512-NoFGP15xsmEwAE5PFXoIeDJn2vBZEc6Z5QRB6g+xzSaGsiR02akiA1V2L9nljdDaanDlv0V55xuoxNCS90Glww==
+  dependencies:
+    esbuild "^0.8.18"
+
+esbuild@^0.8.18:
+  version "0.8.36"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.36.tgz#f5b7c61473721c7d53ffe7c88708e25f3b6182f3"
+  integrity sha512-kcUQB61Tf8rLJ3mOwP2ruWi/iFufaQcEs4No+JA6e7W2kMOtFExOsbyeFpEF6zNacwk2RF5fYUz5jfZwgn/SJg==
+
 escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
