@@ -4,10 +4,10 @@
   "description": "Recursively merge objects",
   "license": "MIT",
   "module": "index.js",
-  "main": "index.cjs.js",
+  "main": "dist/index.cjs.js",
   "scripts": {
     "prepare": "npm test && npm run build",
-    "build": "esbuild index.js --format=cjs --outfile=index.cjs.js",
+    "build": "esbuild cjs.js --bundle --minify-syntax --format=cjs --outfile=index.cjs.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch --notify"
