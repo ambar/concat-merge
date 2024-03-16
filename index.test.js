@@ -1,3 +1,4 @@
+import {test, expect} from 'vitest'
 import concatMerge from './index'
 
 class Plugin {
@@ -29,32 +30,32 @@ const cases = [
 
 test('match result', () => {
   expect(cases.map((args) => concatMerge(...args))).toMatchInlineSnapshot(`
-    Array [
-      Object {},
-      Object {},
-      Object {},
-      Object {},
-      Object {},
-      Object {
+    [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
         "0": 0,
       },
-      Object {
-        "b": Array [
+      {
+        "b": [
           1,
           1,
           2,
         ],
       },
-      Object {
+      {
         "a": 1,
-        "l": Array [
+        "l": [
           3,
         ],
         "o": null,
       },
-      Object {
-        "a": Object {
-          "b": Object {
+      {
+        "a": {
+          "b": {
             "c": "c",
             "d": "d",
             "e": "e",
@@ -62,21 +63,21 @@ test('match result', () => {
           },
         },
       },
-      Object {
-        "a": Array [
+      {
+        "a": [
           Plugin {},
           Plugin {},
         ],
       },
-      Object {
+      {
         "a": Plugin {
           "a": 1,
         },
       },
-      Object {
-        "a": Object {},
+      {
+        "a": {},
       },
-      Object {
+      {
         "a": 1,
       },
     ]

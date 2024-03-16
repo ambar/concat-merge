@@ -8,9 +8,8 @@
   "scripts": {
     "prepare": "npm test && npm run build",
     "build": "esbuild cjs.js --bundle --minify-syntax --format=cjs --outfile=index.cjs.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch --notify"
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --coverage.exclude .*.js --coverage.exclude index.cjs.js"
   },
   "files": [
     "index.cjs.js",
@@ -21,11 +20,8 @@
     "concat",
     "merge"
   ],
-  "jest": {
-    "preset": "es-jest"
-  },
   "devDependencies": {
-    "es-jest": "^1.1.0",
-    "jest": "^26.6.3"
+    "@vitest/coverage-v8": "^1.4.0",
+    "vitest": "^1.4.0"
   }
 }
