@@ -12,6 +12,7 @@
     "test:coverage": "vitest run --coverage --coverage.include index.js"
   },
   "files": [
+    "index.d.ts",
     "index.cjs.js",
     "index.js"
   ],
