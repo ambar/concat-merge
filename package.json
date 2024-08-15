@@ -6,7 +6,7 @@
   "module": "index.js",
   "main": "index.cjs.js",
   "scripts": {
-    "prepare": "npm test && npm run build",
+    "prepare": "npm test -- --no-watch && npm run build",
     "build": "esbuild cjs.js --bundle --minify-syntax --format=cjs --outfile=index.cjs.js",
     "test": "vitest",
     "test:coverage": "vitest run --coverage --coverage.include index.js"
