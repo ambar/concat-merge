@@ -83,3 +83,13 @@ test('match result', () => {
     ]
   `)
 })
+
+test('multiple parameters', () => {
+  expect(concatMerge({a: 1}, {b: 2}, {c: 3})).toMatchInlineSnapshot(`
+    {
+      "a": 1,
+      "b": 2,
+      "c": 3,
+    }
+  `)
+})

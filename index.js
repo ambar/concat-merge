@@ -38,4 +38,7 @@ const concatMerge = (a, b) => {
   return r
 }
 
-export default concatMerge
+const concatMergeAll = (...args) =>
+  args.reduce((acc, next) => concatMerge(acc, next), {})
+
+export default concatMergeAll

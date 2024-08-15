@@ -1,2 +1,2 @@
-function merge<T>(a: T, b: T): T
+declare function merge<T>(...args: T[]): T
 export default merge
