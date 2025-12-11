@@ -17,7 +17,7 @@ const concatMerge = (a, b) => {
   const r = {}
   const keys = Object.keys(a).concat(Object.keys(b))
   for (const key of keys) {
-    const va = a[key]
+    const va = Object.prototype.hasOwnProperty.call(a, key) ? a[key] : undefined;
     if (key in b) {
       const vb = b[key]
       if (Array.isArray(va)) {
