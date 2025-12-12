@@ -20,7 +20,7 @@ const concatMerge = (a, b) => {
     if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
       continue;
     }
-    const va = Object.prototype.hasOwnProperty.call(a, key) ? a[key] : undefined;
+    const va = a[key];
     if (key in b) {
       const vb = b[key]
       if (Array.isArray(va)) {
