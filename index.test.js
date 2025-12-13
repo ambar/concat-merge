@@ -93,3 +93,26 @@ test('multiple parameters', () => {
     }
   `)
 })
+
+test('prototype pollution protection', () => {
+  const defaultUser = {
+    username: 'guest',
+    role: 'visitor',
+  }
+
+  const maliciousPayload = JSON.parse(`{
+    "__proto__": {
+      "isAdmin": true,
+      "role": "admin"
+    }
+  }`)
+
+  const mergedUser = concatMerge(defaultUser, maliciousPayload)
+  // no pollution
+  expect(mergedUser.isAdmin).toBeUndefined()
+  expect(mergedUser.role).toBe('visitor')
+  expect(mergedUser.username).toBe('guest')
+  // no pollution to Object.prototype
+  expect(Object.prototype.isAdmin).toBeUndefined()
+  expect(Object.prototype.role).toBeUndefined()
+})
