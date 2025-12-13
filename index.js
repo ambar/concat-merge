@@ -17,7 +17,10 @@ const concatMerge = (a, b) => {
   const r = {}
   const keys = Object.keys(a).concat(Object.keys(b))
   for (const key of keys) {
-    const va = a[key]
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+      continue;
+    }
+    const va = a[key];
     if (key in b) {
       const vb = b[key]
       if (Array.isArray(va)) {
